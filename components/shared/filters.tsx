@@ -1,3 +1,6 @@
+'use client'
+
+import { useFilterIngredients } from '@/hooks/useFilterIngredients'
 import { Input } from '../ui'
 import { CheckboxFiltersGroup } from './checkbox-filters-group'
 import { FilterCheckbox } from './filter-checkbox'
@@ -9,6 +12,13 @@ interface Props {
 }
 
 export const Filters: React.FC<Props> = ({ className }) => {
+	const { ingredients, loading, onAddId, selectedIds } = useFilterIngredients()
+
+	const items = ingredients.map(item => ({
+		value: String(item.id),
+		text: item.name,
+	}))
+
 	return (
 		<div className={className}>
 			<Title text='Filtering' size='sm' className='mb-5 font-bold' />
@@ -16,8 +26,8 @@ export const Filters: React.FC<Props> = ({ className }) => {
 			{/* Top checkboxes */}
 
 			<div className='flex flex-col gap-4'>
-				<FilterCheckbox text='Can collect' value='1' />
-				<FilterCheckbox text='New products' value='2' />
+				<FilterCheckbox name='ewe' text='Can collect' value='1' />
+				<FilterCheckbox name='ewr' text='New products' value='2' />
 			</div>
 
 			{/* Price Filter */}
@@ -31,92 +41,14 @@ export const Filters: React.FC<Props> = ({ className }) => {
 			</div>
 			<CheckboxFiltersGroup
 				title='Ingredients:'
+				name='ingredients'
 				className='mt-5'
 				limit={6}
-				defaultItems={[
-					{
-						text: 'Cheese sauce',
-						value: '1',
-					},
-					{
-						text: 'Mozzarella',
-						value: '2',
-					},
-					{
-						text: 'Garlic',
-						value: '3',
-					},
-					{
-						text: 'Pickles',
-						value: '4',
-					},
-					{
-						text: 'Red Onion',
-						value: '5',
-					},
-					{
-						text: 'Tomatoes',
-						value: '6',
-					},
-				]}
-				items={[
-					{
-						text: 'Cheese sauce',
-						value: '1',
-					},
-					{
-						text: 'Mozzarella',
-						value: '2',
-					},
-					{
-						text: 'Garlic',
-						value: '3',
-					},
-					{
-						text: 'Pickles',
-						value: '4',
-					},
-					{
-						text: 'Red Onion',
-						value: '5',
-					},
-					{
-						text: 'Tomatoes',
-						value: '6',
-					},
-					{
-						text: 'Garlic',
-						value: '3',
-					},
-					{
-						text: 'Pickles',
-						value: '4',
-					},
-					{
-						text: 'Red Onion',
-						value: '5',
-					},
-					{
-						text: 'Tomatoes',
-						value: '6',
-					},
-					{
-						text: 'Garlic',
-						value: '3',
-					},
-					{
-						text: 'Pickles',
-						value: '4',
-					},
-					{
-						text: 'Red Onion',
-						value: '5',
-					},
-					{
-						text: 'Tomatoes',
-						value: '6',
-					},
-				]}
+				defaultItems={items.slice(0, 6)}
+				items={items}
+				loading={loading}
+				onClickCheckbox={onAddId}
+				selectedIds={selectedIds}
 			/>
 		</div>
 	)
