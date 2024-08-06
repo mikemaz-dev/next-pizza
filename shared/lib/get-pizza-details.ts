@@ -1,6 +1,6 @@
 import { Ingredient, ProductItem } from '@prisma/client'
 import { calcTotalPizzaPrice } from './calc-total-pizza-price'
-import { PizzaType, PizzaSize, mapPizzaTypes } from '../constants/pizza'
+import { PizzaType, PizzaSize, mapPizzaType } from '../constants/pizza'
 
 export const getPizzaDetails = (
 	type: PizzaType,
@@ -17,6 +17,6 @@ export const getPizzaDetails = (
 		selectedIngredients
 	)
 
-	const textDetails = `${size} sm, ${mapPizzaTypes[type]} pizza`
+	const textDetails = `${size} sm, ${mapPizzaType[type]} pizza`
 	return { totalPrice, textDetails }
 }
