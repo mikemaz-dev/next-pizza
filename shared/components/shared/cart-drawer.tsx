@@ -17,7 +17,6 @@ import { CartDrawerItem } from './cart-drawer-item'
 import { getCartItemDetails } from '@/shared/lib'
 import { useCartStore } from '@/shared/store'
 import { PizzaSize, PizzaType } from '@/shared/constants/pizza'
-import { stat } from 'fs'
 
 interface Props {
 	className?: string
@@ -64,10 +63,9 @@ export const CartDrawer: React.FC<PropsWithChildren<Props>> = ({
 					</SheetTitle>
 				</SheetHeader>
 				<div className='-mx-4 gap-2 mt-5 scrollbar flex-1 overflow-auto'>
-					<div className='mb-2'>
-						{items.map(item => (
+					{items.map(item => (
+						<div key={item.id} className='mb-2'>
 							<CartDrawerItem
-								key={item.id}
 								id={item.id}
 								imageUrl={item.imageUrl}
 								details={
@@ -87,8 +85,8 @@ export const CartDrawer: React.FC<PropsWithChildren<Props>> = ({
 								}
 								onClickRemove={() => removeCartItem(item.id)}
 							/>
-						))}
-					</div>
+						</div>
+					))}
 				</div>
 				{/* Items */}
 				<SheetFooter className='-mx-6 bg-white p-8 rounded-t-md'>
