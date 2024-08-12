@@ -38,9 +38,9 @@ export async function PATCH(
 
 		return NextResponse.json(updatedUserCart)
 	} catch (error) {
-		console.log('[CART_PATCH server error]', error)
+		console.log('[CART_PATCH] Server error', error)
 		return NextResponse.json(
-			{ message: 'Failed to update shopping cart' },
+			{ message: 'Не удалось обновить корзину' },
 			{ status: 500 }
 		)
 	}
@@ -60,7 +60,7 @@ export async function DELETE(
 
 		const cartItem = await prisma.cartItem.findFirst({
 			where: {
-				id,
+				id: Number(params.id),
 			},
 		})
 
@@ -70,7 +70,7 @@ export async function DELETE(
 
 		await prisma.cartItem.delete({
 			where: {
-				id,
+				id: Number(params.id),
 			},
 		})
 
@@ -78,9 +78,9 @@ export async function DELETE(
 
 		return NextResponse.json(updatedUserCart)
 	} catch (error) {
-		console.log('[CART_DELETE] server error', error)
+		console.log('[CART_DELETE] Server error', error)
 		return NextResponse.json(
-			{ message: 'Failed to delete item from cart' },
+			{ message: 'Не удалось удалить корзину' },
 			{ status: 500 }
 		)
 	}

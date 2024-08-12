@@ -8,7 +8,7 @@ interface Props {
 	name: string
 	price: number
 	loading?: boolean
-	onSubmit?: (productItemId: number, ingredients: number[]) => Promise<void>
+	onSubmit?: (itemId?: number, ingredients?: number[]) => void
 	className?: string
 }
 
@@ -37,7 +37,7 @@ export const ChooseProductForm: React.FC<Props> = ({
 				<Title text={name} size='md' className='font-extrabold mb-1' />
 				<Button
 					loading={loading}
-					onClick={() => onSubmit?.(0, [])}
+					onClick={() => onSubmit?.()}
 					className='h-[55px] px-10 text-base rounded-[18px] w-full mt-10'
 				>
 					Add to cart for {price} $

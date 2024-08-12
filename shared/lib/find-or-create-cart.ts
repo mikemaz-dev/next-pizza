@@ -14,5 +14,6 @@ export const findOrCreateCart = async (token: string) => {
 			},
 		})
 	}
+
 	return userCart
 }

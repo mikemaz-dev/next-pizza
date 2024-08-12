@@ -4,6 +4,7 @@ import crypto from 'crypto'
 import { findOrCreateCart } from '@/shared/lib/find-or-create-cart'
 import { CreateCartItemValues } from '@/shared/services/dto/cart.dto'
 import { updateCartTotalAmount } from '@/shared/lib/update-cart-total-amount'
+import { ingredients } from '@/prisma/constants'
 
 export async function GET(req: NextRequest) {
 	try {
@@ -37,10 +38,14 @@ export async function GET(req: NextRequest) {
 				},
 			},
 		})
+
 		return NextResponse.json(userCart)
 	} catch (error) {
 		console.log('[CART_GET] Server error', error)
-		return NextResponse.json({ error: 'Failed to get cart' }, { status: 500 })
+		return NextResponse.json(
+			{ message: 'Не удалось получить корзину' },
+			{ status: 500 }
+		)
 	}
 }
 
@@ -67,6 +72,7 @@ export async function POST(req: NextRequest) {
 				},
 			},
 		})
+
 		if (findCartItem) {
 			await prisma.cartItem.update({
 				where: {
@@ -95,7 +101,7 @@ export async function POST(req: NextRequest) {
 	} catch (error) {
 		console.log('[CART_POST] Server error', error)
 		return NextResponse.json(
-			{ message: 'Cannot add item to cart' },
+			{ message: 'Не удалось создать корзину' },
 			{ status: 500 }
 		)
 	}
