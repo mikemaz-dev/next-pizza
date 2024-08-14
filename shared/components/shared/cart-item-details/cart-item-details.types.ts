@@ -6,4 +6,6 @@ export interface CartItemProps {
 	price: number
 	quantity: number
 	disabled?: boolean
+	onClickCountButton?: (type: 'plus' | 'minus') => void
+	onClickRemove?: () => void
 }
