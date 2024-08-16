@@ -33,7 +33,7 @@ export const CheckoutItem: React.FC<Props> = ({
 		>
 			<div className='flex items-center gap-5 flex-1'>
 				<CartItemDetails.Image src={imageUrl} />
-				<CartItemDetails.Info className='w-1/2' name={name} details={details} />
+				<CartItemDetails.Info name={name} details={details} />
 			</div>
 
 			<CartItemDetails.Price value={price} />
