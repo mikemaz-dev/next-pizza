@@ -9,12 +9,12 @@ datasource db {
 }
 
 model User {
-  id       Int      @id @default(autoincrement())
+  id       Int       @id @default(autoincrement())
   fullName String
-  email    String   @unique
+  email    String    @unique
   password String
-  role     UserRole @default(USER)
-  verified DateTime
+  role     UserRole  @default(USER)
+  verified DateTime?
 
   provider   String?
   providerId String?

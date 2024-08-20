@@ -26,7 +26,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"shared/components/shared/group-variants.tsx"
+		"shared/components/shared/group-variants.tsx",
+		"@types/*.d.ts"
 	],
 	"exclude": ["node_modules"]
 }

@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const RequiredSymbol: React.FC<Props> = ({ className }) => {
-	return <Asterisk className='text-red-500' />
+	return <span className='text-red-500'>*</span>
 }
