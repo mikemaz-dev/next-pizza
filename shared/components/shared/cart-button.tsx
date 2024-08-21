@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/shared/lib/utils'
+import { cn } from '@/shared/lib/'
 import React from 'react'
 import { Button } from '../ui'
 import { ArrowRight, ShoppingCart } from 'lucide-react'

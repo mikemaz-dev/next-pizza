@@ -4,6 +4,8 @@ import {
 	ProductsGroupList,
 	Title,
 	TopBar,
+	Stories,
+	InstaStories,
 } from '@/shared/components/shared'
 import { findPizzas, GetSearchParams } from '@/shared/lib/find-pizza'
 import { Suspense } from 'react'
@@ -22,6 +24,9 @@ export default async function Home({
 			<TopBar
 				categories={categories.filter(category => category.products.length > 0)}
 			/>
+
+			<InstaStories />
+
 			<Container className='mt-10 pb-14'>
 				<div className='flex gap-[80px]'>
 					{/* Filtering */}
