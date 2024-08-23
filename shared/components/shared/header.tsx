@@ -8,7 +8,7 @@ import { Container } from './container'
 import { ProfileButton } from './profile-button'
 import { SearchInput } from './search-input'
 import { AuthModal } from './modals'
-import { FC, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
@@ -49,7 +49,7 @@ export const Header: React.FC<Props> = ({
 
 	return (
 		<header className={cn('border-b', className)}>
-			<Container className='flex items-center justify-between py-8'>
+			<Container className='flex items-center justify-between py-8 max-lg:py-2 max-lg:grid max-lg:grid-cols-2 max-lg:gap-4'>
 				{/* Left side */}
 				<Link
 					href='/'
@@ -57,20 +57,22 @@ export const Header: React.FC<Props> = ({
 				>
 					<Image src='/logo.png' alt='Logo' width={35} height={35} />
 					<div className=''>
-						<h1 className='text-2xl uppercase font-black'>Next Pizza</h1>
+						<h1 className='text-2xl max-lg:text-sm uppercase font-black'>
+							Next Pizza
+						</h1>
 						<p className='text-sm text-gray-400 leading-3'>
 							the most delicious pizzas
 						</p>
 					</div>
 				</Link>
 				{hasSearch && (
-					<div className='mx-10 flex-1'>
+					<div className='mx-10 flex-1 max-lg:mx-0'>
 						<SearchInput />
 					</div>
 				)}
 
 				{/* Right side */}
-				<div className='flex items-center gap-3'>
+				<div className='flex items-center justify-between gap-3'>
 					<AuthModal
 						open={openAuthModal}
 						onClose={() => setOpenAuthModal(false)}

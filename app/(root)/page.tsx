@@ -4,7 +4,6 @@ import {
 	ProductsGroupList,
 	Title,
 	TopBar,
-	Stories,
 	InstaStories,
 } from '@/shared/components/shared'
 import { findPizzas, GetSearchParams } from '@/shared/lib/find-pizza'
@@ -19,25 +18,28 @@ export default async function Home({
 	return (
 		<>
 			<Container className='mt-10'>
-				<Title text='All pizzas' size='lg' className='font-extrabold mb-5' />
+				<Title
+					text='All pizzas'
+					size='lg'
+					className='font-extrabold mb-5 max-lg:mb-0'
+				/>
 			</Container>
 			<TopBar
 				categories={categories.filter(category => category.products.length > 0)}
 			/>
-
-			<InstaStories />
+			<div className='max-lg:hidden'>
+				<InstaStories />
+			</div>
 
 			<Container className='mt-10 pb-14'>
-				<div className='flex gap-[80px]'>
+				<div className='flex justify-between gap-[80px]'>
 					{/* Filtering */}
-					<div className='w-[250px]'>
-						<Suspense>
-							<Filters />
-						</Suspense>
-					</div>
+					<Suspense>
+						<Filters className='w-[250px] max-lg:hidden' />
+					</Suspense>
 					{/* Products list */}
 					<div className='flex-1'>
-						<div className='flex flex-col gap-16'>
+						<div className='flex flex-col max-lg:grid gap-16'>
 							{categories.map(
 								category =>
 									category.products.length > 0 && (
