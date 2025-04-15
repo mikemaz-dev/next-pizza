@@ -1,10 +1,11 @@
-import { prisma } from '@/prisma/prisma-client'
-import { UserRole } from '@prisma/client'
-import { compare, hashSync } from 'bcrypt'
 import { AuthOptions } from 'next-auth'
+import GitHubProvider from 'next-auth/providers/github'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
-import GitHubProvider from 'next-auth/providers/github'
+
+import { prisma } from '@/prisma/prisma-client'
+import { compare, hashSync } from 'bcrypt'
+import { UserRole } from '@prisma/client'
 
 export const authOptions: AuthOptions = {
 	providers: [
@@ -28,14 +29,8 @@ export const authOptions: AuthOptions = {
 		CredentialsProvider({
 			name: 'Credentials',
 			credentials: {
-				email: {
-					label: 'Email',
-					type: 'text',
-				},
-				password: {
-					label: 'Password',
-					type: 'password',
-				},
+				email: { label: 'Email', type: 'text' },
+				password: { label: 'Password', type: 'password' },
 			},
 			async authorize(credentials) {
 				if (!credentials) {
@@ -113,6 +108,7 @@ export const authOptions: AuthOptions = {
 							providerId: account?.providerAccountId,
 						},
 					})
+
 					return true
 				}
 
@@ -126,9 +122,10 @@ export const authOptions: AuthOptions = {
 						providerId: account?.providerAccountId,
 					},
 				})
+
 				return true
 			} catch (error) {
-				console.log('[LOGIN] Error', error)
+				console.error('Error [SIGNIN]', error)
 				return false
 			}
 		},
@@ -136,15 +133,17 @@ export const authOptions: AuthOptions = {
 			if (!token.email) {
 				return token
 			}
+
 			const findUser = await prisma.user.findFirst({
 				where: {
 					email: token.email,
 				},
 			})
+
 			if (findUser) {
 				token.id = String(findUser.id)
-				token.fullName = findUser.fullName
 				token.email = findUser.email
+				token.fullName = findUser.fullName
 				token.role = findUser.role
 			}
 
@@ -155,6 +154,7 @@ export const authOptions: AuthOptions = {
 				session.user.id = token.id
 				session.user.role = token.role
 			}
+
 			return session
 		},
 	},
