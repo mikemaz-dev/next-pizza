@@ -1,4 +1,5 @@
 import { Header } from '@/shared/components'
+import { Suspense } from 'react'
 
 export const metadata = {
 	title: 'Next.js',
@@ -13,7 +14,9 @@ export default function DashboardLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<Header />
+				<Suspense>
+					<Header />
+				</Suspense>
 				{children}
 			</body>
 		</html>
