@@ -12,7 +12,9 @@ export const VerificationUserTemplate: React.FC<Props> = ({ code }) => {
 			</h2>
 
 			<p>
-				<a href={`http://localhost:3000/api/auth/verify?code=${code}`}>
+				<a
+					href={`http://next-pizza-7zt4-nine.vercel.app/api/auth/verify?code=${code}`}
+				>
 					Confirm registration
 				</a>
 			</p>
