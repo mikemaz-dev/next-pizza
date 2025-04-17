@@ -74,7 +74,7 @@ git clone https://github.com/mikemaz-dev/next-pizza.git
 npm install
 
 # Create .env file and add required variables
-POSTGRES_URL==
+POSTGRES_URL
 POSTGRES_URL_NON_POOLING
 RESEND_API_KEY
 NEXTAUTH_SECRET
