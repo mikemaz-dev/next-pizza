@@ -48,7 +48,7 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 <br><strong>TypeScript</strong>
 </td>
 <td align="center" width="100">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="48" height="48" alt="Tailwind CSS" />
+<img src="https://github.com/devicons/devicon/tree/v2.16.0/icons/tailwindcss/tailwindcss-plain.svg" width="48" height="48" alt="Tailwind CSS" />
 <br><strong>Tailwind CSS</strong>
 </td>
 <td align="center" width="100">
