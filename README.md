@@ -218,7 +218,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🙏 Acknowledgments
 
-- Inspired by [DodoPizza](https://dodopizza.com/) for the design and functionality
+- Inspired by [DodoPizza](https://dodopizza.pl) for the design and functionality
 - Thanks to the Next.js team for the amazing framework
 - Vercel for providing excellent hosting and database services
 - The open-source community for the incredible tools and libraries
