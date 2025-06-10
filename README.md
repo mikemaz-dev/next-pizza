@@ -48,8 +48,8 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 <br><strong>TypeScript</strong>
 </td>
 <td align="center" width="100">
-![TailwindCSS](https://readmebadge.vercel.app/badges/tailwind.svg)
-<br><strong>Tailwind CSS</strong>
+  <img src="https://readmebadge.vercel.app/badges/tailwind.svg" alt="TailwindCSS" width="48" height="48" />
+  <br /><strong>Tailwind CSS</strong>
 </td>
 <td align="center" width="100">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" width="48" height="48" alt="Prisma" />
