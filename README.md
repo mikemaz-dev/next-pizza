@@ -9,7 +9,7 @@ A full-featured pizza delivery web application inspired by DodoPizza, built with
 
 ## 🚀 Live Demo
 
-Visit the live application: [Your Vercel URL here]
+Visit the live application: https://next-pizza-7zt4-nine.vercel.app/
 
 ## 📱 Live Preview
 
@@ -48,7 +48,7 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 <br><strong>TypeScript</strong>
 </td>
 <td align="center" width="100">
-<img src="https://drive.google.com/file/d/1T-JW0pIo0JHJhSUbZ0j2Jr-97XBTzFhX/view?usp=drive_link" width="48" height="48" alt="Tailwind CSS" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="48" height="48" alt="Tailwind CSS" />
 <br><strong>Tailwind CSS</strong>
 </td>
 <td align="center" width="100">
