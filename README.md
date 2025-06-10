@@ -1,4 +1,4 @@
-# 🍕 NextPizza — DodoPizza Clone with Next.js
+o# 🍕 NextPizza — DodoPizza Clone with Next.js
 
 A full-featured pizza delivery web application inspired by DodoPizza, built with modern web technologies and demonstrating real-world e-commerce functionality.
 
@@ -48,7 +48,7 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 <br><strong>TypeScript</strong>
 </td>
 <td align="center" width="100">
-<img src="https://drive.google.com/file/d/1T-JW0pIo0JHJhSUbZ0j2Jr-97XBTzFhX/view?usp=drive_link" width="48" height="48" alt="Tailwind CSS" />
+<img src=https://readmebadge.vercel.app/badges/tailwind.svg" width="48" height="48" alt="Tailwind CSS" />
 <br><strong>Tailwind CSS</strong>
 </td>
 <td align="center" width="100">
