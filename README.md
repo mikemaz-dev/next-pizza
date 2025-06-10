@@ -9,7 +9,7 @@ A full-featured pizza delivery web application inspired by DodoPizza, built with
 
 ## 🚀 Live Demo
 
-Visit the live application: [Your Vercel URL here]
+Visit the live application: https://next-pizza-7zt4-nine.vercel.app/
 
 ## 📱 Live Preview
 
