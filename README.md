@@ -44,6 +44,10 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 <br><strong>Next.js 14</strong>
 </td>
 <td align="center" width="100">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" height="48" alt="React" />
+<br><strong>React</strong>
+</td>
+<td align="center" width="100">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="48" height="48" alt="TypeScript" />
 <br><strong>TypeScript</strong>
 </td>
@@ -60,10 +64,6 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 <td align="center" width="100">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="48" height="48" alt="PostgreSQL" />
 <br><strong>PostgreSQL</strong>
-</td>
-<td align="center" width="100">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" height="48" alt="React" />
-<br><strong>React</strong>
 </td>
 <td align="center" width="100">
 <img src="https://authjs.dev/img/logo-sm.png" width="48" height="48" alt="NextAuth.js" />
