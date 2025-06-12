@@ -1,4 +1,4 @@
-o# 🍕 NextPizza — DodoPizza Clone with Next.js
+# 🍕 NextPizza — DodoPizza Clone with Next.js
 
 A full-featured pizza delivery web application inspired by DodoPizza, built with modern web technologies and demonstrating real-world e-commerce functionality.
 
