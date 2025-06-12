@@ -139,13 +139,13 @@ NextPizza is a comprehensive pizza delivery platform that replicates the functio
 
 ```
 next-pizza/
-├── app/                    # Next.js App Router
-│   ├── (auth)/            # Authentication routes
-│   ├── (dashboard)/       # Dashboard routes
-│   ├── api/               # API routes
-│   └── globals.css        # Global styles
-├── components/            # Reusable components
-├── lib/                   # Utility functions
+├── app/                  # Next.js App Router
+│   ├── (auth)/           # Authentication routes
+│   ├── (dashboard)/      # Dashboard routes
+│   ├── api/              # API routes
+│   └── globals.css       # Global styles
+├── components/           # Reusable components
+├── lib/                  # Utility functions
 ├── prisma/               # Database schema and migrations
 ├── public/               # Static assets
 ├── types/                # TypeScript type definitions
